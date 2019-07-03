@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Preloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="drag.css">
+  </head>
+  <body>
+
+
+<div class="btns">
+  <div class="button-wrapper">
+<span class="label">
+  Cargar Imagenes
+</span>
+
+  <input type="file" name="upload" id="files" class="upload-box" placeholder="Cargar Imagenes" multiple>
+
+</div>
+
+<button type="button" onclick="startDrag()" name="button" class="movebtn">Mover Imagenes</button>
+</div>
+
+
+    <section class="imagenes">
+
+      <div class="images-preloaders" id="result">
+
+      </div>
+    </section>
+<script src="indes.js" charset="utf-8"></script>
+<script src="drag.js" charset="utf-8"></script>
+  </body>
+</html>
