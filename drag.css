@@ -9,6 +9,3 @@ user-select: none;
 -khtml-user-drag: element;
 -webkit-user-drag: element;
 }
-.dragItem {
-cursor: move;
-}

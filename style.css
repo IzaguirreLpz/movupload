@@ -1,6 +1,6 @@
 
 /* Codigo para el preloader */
-.imagenes{
+/* .imagenes{
   width: 100%;
 }
 
@@ -23,8 +23,8 @@
 .btns{
   display: flex;
 
-}
-
+} */
+/* 
 .images-preloaders{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -109,4 +109,53 @@
     left: 0;
     opacity: 0;
     cursor: pointer;
+} */
+
+/* Estilos para el dropzone */
+
+.box{
+  font-size: 1.25rem;
+  background-color: #fff;
+  border: 2px solid #33CCFF;
+  position: relative;
+  padding: 54px 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.drop{
+  cursor: pointer;
+}
+
+.box_input{
+  text-align: center;
+}
+
+.box__icon{
+  margin-bottom: 15px;
+}
+
+.click:hover{
+  color: #58D5FF
+}
+
+.dragItem{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 16px;
+  min-height: 100px;
+  background: #fff;
+}
+
+.preview-images{
+  border-radius: 20px;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  display: block;
+  z-index: 10;
+}
+

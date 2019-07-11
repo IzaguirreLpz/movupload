@@ -1,0 +1,28 @@
+{
+  "name": "movupload",
+  "version": "1.0.0",
+  "description": "Libreria para poder hacer gestion de imagenes previo a cargarse en un servidor y/o base de datos, esta libreria te permite ver las imagenes a cargar eliminar las que no necesitas y moverlas segun el orden en que deseas guardarlas",
+  "main": "drag.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IzaguirreLpz/movupload.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IzaguirreLpz/movupload/issues"
+  },
+  "homepage": "https://github.com/IzaguirreLpz/movupload#readme",
+  "devDependencies": {
+    "css-loader": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
