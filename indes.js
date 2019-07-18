@@ -1,4 +1,5 @@
 const startDrag = require('./drag.js');
+import './style.css';
 
 window.onload = async function () {
   var drop = document.querySelector('.drop');
@@ -38,14 +39,13 @@ window.onload = async function () {
     })
 
     drop.addEventListener('click',function(e){
+      // e.stopPropagation();
       filesInput.value = null;
       filesInput.click();
     })
 
     function input(e) {
-     document.getElementById('box_input').style.display = 'none';
-
-      var files = event.target.files; //FileList object
+    document.getElementById('box_input').style.display ='none';
       var output = document.getElementById("form");
 
       var files;
@@ -68,24 +68,32 @@ window.onload = async function () {
                       var n = d.getMilliseconds();
                       var rand = Math.round(Math.random() * 1000);
                       var picFile = event.target;
+                      
+                      var divprueba = document.createElement('div');
+
+                      divprueba.innerHTML = `<div class="boton-borrar">
+                      <button type="button" class="delete" name="button">X</button>
+                      </div>`
+
+                
+
+
                       var div = document.createElement("div");
 
                       div.setAttribute("id", `${n}${rand}`);
-                      // div.setAttribute("draggable", "true");
+                      div.setAttribute("draggable", "true");
                       div.classList.add("dragItem")
-                      div.innerHTML = `<div class="preview-images">
+            
+                      div.innerHTML = `
 
-                            <img id=${file.name} draggable="true" src="${picFile.result}" alt=""/>
-                            </div>
+                            <img class="images-loader" id="${file.name}" draggable="true" src="${picFile.result}" alt="${file.name}">
+                            
                           `
-      
-                            // <div class="boton-borrar">
-                            //   <button type="button" onclick="borrarFoto(this)" class="delete" name="button">X</button>
-                            // </div>
+                       divprueba.appendChild(div);
 
-                       output.insertBefore(div,null); 
+                       output.insertBefore(divprueba,null); 
+
                        await startDrag();
-
                     }); 
 
                     //Read the image
@@ -107,11 +115,3 @@ window.onload = async function () {
 
 
 
-function borrarFoto(id) {
-  console.log(id);
-  var x = id.parentNode.parentNode.parentNode.id
-  //  var x = document.getElementById(id).parentElement.id;
-  var div = document.getElementById(x);
-  console.log(x);
-  div.parentNode.removeChild(div);
-}

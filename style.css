@@ -44,35 +44,9 @@
   position: relative;
 }
 
-.boton-borrar{
-    position: absolute;
-    top: 10px;
-    right: 60px;
-}
 
-.delete{
-  border-radius: 50%;
-  color: #fff;
-  background-color: #ff000087;
-  border: none;
-  font-size: 10px;
-  padding: 10px 12px;
-}
 
-.delete:hover{
-    background-color: #fff;
-    color:red;
-}
 
-.butn {
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  background: #3498db;
-  padding: 10px 20px 10px 20px;
-  border: solid #ffffff 0px;
-  text-decoration: none;
-}
 
 .butn:hover {
   background: #3cb0fd;
@@ -126,7 +100,7 @@
 
 .drop{
   cursor: pointer;
-}
+} 
 
 .box_input{
   text-align: center;
@@ -141,21 +115,40 @@
 }
 
 .dragItem{
-  position: relative;
+  position: relative; 
   display: inline-block;
   vertical-align: top;
   margin: 16px;
-  min-height: 100px;
   background: #fff;
-}
-
-.preview-images{
+  min-height: 100px;
   border-radius: 20px;
   overflow: hidden;
   width: 120px;
   height: 120px;
-  position: relative;
-  display: block;
-  z-index: 10;
+}
+
+.images-loader{
+  width: 100%;
+  height: 100%;
+}
+
+.delete{
+  border-radius: 50%;
+  color: #fff;
+  background-color: #ff000087;
+  border: none;
+  font-size: 10px;
+  padding: 10px 12px;
+}
+
+.delete:hover{
+    background-color: #fff;
+    color:red;
+}
+
+
+.boton-borrar{
+  position: absolute;
+  z-index: 1;
 }
 
